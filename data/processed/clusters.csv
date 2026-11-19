@@ -1,4 +1,9 @@
 cluster_id,n_accidents,killed,injured,score,centroid_lat,centroid_lon,radius_m,peak_time_bucket,peak_weekday,top_vehicle,label,rank_by_score,rank_by_count
-0,12,6,15,33.5,27.525131,77.651997,156.1,morning,Sunday,bike,"NH-19 Highway Toll Plaza, Mathura",1,1
-1,12,5,11,27.0,27.497648,77.681028,177.9,night,Monday,bike,"Bhuteshwar Junction, Mathura",2,1
-2,8,4,11,24.0,27.48286,77.663834,190.7,morning,Saturday,car,"Goverdhan Chauraha, Mathura",3,3
+0,27,19,53,111.5,24.605234,83.054697,90.9,night,Saturday,truck,"NH-39 मारकुंडी घाटी तीसरा मोड़, सोनभद्र NH-39",1,1
+3,16,10,39,69.0,24.321417,83.045021,80.6,night,Sunday,truck,हाथीनाला मोड़ के पास,2,5
+2,22,12,29,67.0,24.523719,83.038278,167.8,night,Sunday,bike,चोपन सोन नदी पुल के पास,3,3
+1,24,4,21,37.5,24.218125,83.032616,119.8,morning,Friday,truck,मुर्धवा मोड़ रेणुकूट के पास,4,2
+7,13,5,16,31.0,24.125541,82.709093,117.5,night,Friday,bike,"शक्तिनगर ज्वालामुखी मोड़ के पास, सोनभद्र",5,7
+4,20,4,13,29.5,24.20285,82.76818,62.2,morning,Saturday,bike,"अनपरा ककरी मोड़ के पास, सोनभद्र",6,4
+5,14,4,12,26.0,24.698525,83.102904,165.3,morning,Saturday,bike,चुर्क तिराहा के पास,7,6
+6,12,4,5,19.5,24.215334,83.247209,137.3,night,Wednesday,bike,दुद्धी कस्बा चौराहा के पास,8,8

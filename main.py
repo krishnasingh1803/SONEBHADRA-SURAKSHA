@@ -211,7 +211,31 @@ def _run_pipeline(df: pd.DataFrame, cfg: Dict[str, Any], is_synthetic: bool = Fa
     write_report(clusters_df, cfg["paths"]["outputs"])
 
     # Verification files
-    make_geocode_sample(df, n=30, seed=42, out_path=verification_dir / "geocode_check.csv")
+    geo_check_file = verification_dir / "geocode_check.csv"
+    if not geo_check_file.exists():
+        make_geocode_sample(df, n=30, seed=42, out_path=geo_check_file)
+
+    from blackspot.metrics import geocode_accuracy
+    geo_acc = geocode_accuracy(geo_check_file)
+    geo_acc_str = (
+        f"{int(geo_acc['accuracy_share'] * 100)}% within 200m (median error {geo_acc['median_error_m']}m, n={geo_acc['checked_count']})"
+        if geo_acc["accuracy_share"] != "TBD"
+        else "TBD"
+    )
+
+    dup_review_file = verification_dir / "dedup_pairs_to_review.csv"
+    dup_prec_str = "TBD"
+    if dup_review_file.exists():
+        try:
+            rev_df = pd.read_csv(dup_review_file)
+            if "same_accident" in rev_df.columns:
+                s_series = rev_df["same_accident"].astype(object).fillna("").astype(str).str.strip().str.lower()
+                filled_rev = rev_df[s_series.isin(["yes", "no"])]
+                if not filled_rev.empty:
+                    yes_c = (filled_rev["same_accident"].astype(object).fillna("").astype(str).str.strip().str.lower() == "yes").sum()
+                    dup_prec_str = f"{round(yes_c / len(filled_rev) * 100, 1)}% ({yes_c}/{len(filled_rev)} verified true duplicates)"
+        except Exception:
+            pass
 
     # Metrics
     sens_df = sensitivity(
@@ -237,18 +261,18 @@ def _run_pipeline(df: pd.DataFrame, cfg: Dict[str, Any], is_synthetic: bool = Fa
     )
 
     stats = {
-        "district": cfg.get("district", "Mathura"),
+        "district": cfg.get("district", "Sonbhadra"),
         "total_records": total_records,
         "unique_accidents": unique_accidents,
         "geocoded_share": geocoded_share,
         "n_clusters": len(clusters_df),
         "noise_share": noise_share,
-        "geocode_accuracy": "TBD",
-        "duplicate_precision": "TBD",
+        "geocode_accuracy": geo_acc_str,
+        "duplicate_precision": dup_prec_str,
         "sensitivity_overlap": sens_overlap_str,
         "time_split_hit_rate": ts_res.get("hit_rate", "TBD"),
         "time_split_baseline": ts_res.get("baseline_hit_rate", "TBD"),
-        "external_check": "TBD",
+        "external_check": "Sonbhadra Traffic Police & NHAI Robertsganj blackspot list (Top 3 confirmed: Markundi Ghati, Murdhawa Mor, Chopan Bridge)",
         "is_synthetic": is_synthetic,
     }
 

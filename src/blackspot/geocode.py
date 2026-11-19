@@ -77,7 +77,7 @@ def build_queries(
 
 def district_bbox(
     geocoder: Any,
-    district: str = "Mathura",
+    district: str = "Sonbhadra",
     country: str = "India",
     margin_km: float = 5.0,
     cache_path: Optional[Path | str] = None,
@@ -87,9 +87,28 @@ def district_bbox(
     Returns:
         Tuple of (min_lat, min_lon, max_lat, max_lon).
     """
-    # Mathura default district bounds if offline or fallback needed
-    default_bounds = (27.1, 77.2, 27.9, 77.9)
+    # District bounding bounds fallback
+    d_clean = district.lower().replace(" ", "")
     margin_deg = margin_km / 111.0
+
+    if "sonbhadra" in d_clean or "sonebhadra" in d_clean:
+        default_bounds = (23.85, 82.60, 24.85, 83.45)
+        return (
+            default_bounds[0] - margin_deg,
+            default_bounds[1] - margin_deg,
+            default_bounds[2] + margin_deg,
+            default_bounds[3] + margin_deg,
+        )
+    elif "mathura" in d_clean:
+        default_bounds = (27.1, 77.2, 27.9, 77.9)
+        return (
+            default_bounds[0] - margin_deg,
+            default_bounds[1] - margin_deg,
+            default_bounds[2] + margin_deg,
+            default_bounds[3] + margin_deg,
+        )
+    else:
+        default_bounds = (27.1, 77.2, 27.9, 77.9)
 
     if geocoder is None:
         return (

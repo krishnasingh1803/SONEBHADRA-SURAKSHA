@@ -113,9 +113,20 @@ def merge_duplicates(
     if review_output_path:
         out_p = Path(review_output_path)
         out_p.parent.mkdir(parents=True, exist_ok=True)
-        review_df = pairs[["id_a", "id_b"]].copy() if not pairs.empty else pd.DataFrame(columns=["id_a", "id_b"])
-        review_df["same_accident"] = ""
-        review_df.to_csv(out_p, index=False)
+        # Check if already reviewed
+        already_reviewed = False
+        if out_p.exists():
+            try:
+                existing_rev = pd.read_csv(out_p)
+                if "same_accident" in existing_rev.columns and existing_rev["same_accident"].fillna("").astype(str).str.strip().ne("").any():
+                    already_reviewed = True
+            except Exception:
+                pass
+
+        if not already_reviewed:
+            review_df = pairs[["id_a", "id_b"]].copy() if not pairs.empty else pd.DataFrame(columns=["id_a", "id_b"])
+            review_df["same_accident"] = ""
+            review_df.to_csv(out_p, index=False)
 
     df_out = df.copy()
     if "dup_of" not in df_out.columns:

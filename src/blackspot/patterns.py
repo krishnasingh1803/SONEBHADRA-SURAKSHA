@@ -137,7 +137,7 @@ def save_charts(
             fig, ax = plt.subplots(figsize=(6, 4))
             if not c_tb.empty:
                 c_tb.plot(kind="bar", ax=ax, color=ACCENT_COLOR, edgecolor="none", width=0.5)
-            _style_axis(ax, f"Cluster {c_id} ({c_label[:20]}): Time Breakdown", "Time Bucket", "Count")
+            _style_axis(ax, f"Cluster {c_id}: Time Breakdown", "Time Bucket", "Count")
             plt.xticks(rotation=0)
             plt.tight_layout()
             cp = out_path / f"cluster_{c_id}_time_bucket.png"
