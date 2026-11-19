@@ -1,0 +1,4 @@
+cluster_id,n_accidents,killed,injured,score,centroid_lat,centroid_lon,radius_m,peak_time_bucket,peak_weekday,top_vehicle,label,rank_by_score,rank_by_count
+0,12,6,15,33.5,27.525131,77.651997,156.1,morning,Sunday,bike,"NH-19 Highway Toll Plaza, Mathura",1,1
+1,12,5,11,27.0,27.497648,77.681028,177.9,night,Monday,bike,"Bhuteshwar Junction, Mathura",2,1
+2,8,4,11,24.0,27.48286,77.663834,190.7,morning,Saturday,car,"Goverdhan Chauraha, Mathura",3,3

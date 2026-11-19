@@ -1,0 +1,33 @@
+district: 'Mathura'
+country: 'India'
+geocoder:
+  user_agent: 'blackspot-mapper-student-project'
+  min_delay_seconds: 1.1
+  timeout_seconds: 10
+  bbox_margin_km: 5
+dedup:
+  max_distance_m: 300
+  max_day_gap: 1
+cluster:
+  eps_m: 300
+  min_samples: 3
+  sensitivity_eps_m: [200, 300, 500]
+score:
+  w_killed: 3
+  w_injured: 1
+  w_none: 0.5
+map:
+  top_n: 10
+time_buckets:
+  morning: [5, 11]
+  afternoon: [12, 16]
+  evening: [17, 20]
+  night: [21, 4]
+paths:
+  raw: data/raw/accidents_raw.csv
+  sample: data/sample/accidents_sample.csv
+  cache: data/interim/geocode_cache.json
+  overrides: data/interim/geocode_overrides.csv
+  clean: data/processed/accidents_clean.csv
+  clusters: data/processed/clusters.csv
+  outputs: outputs

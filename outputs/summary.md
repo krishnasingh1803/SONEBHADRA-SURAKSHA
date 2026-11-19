@@ -1,0 +1,30 @@
+# Accident Blackspot Mapper: Summary Report
+
+> ⚠️ **SYNTHETIC DEMO DATA**: These statistics were computed on synthetic test data.
+
+Core Claim: "Identifies indicative accident clusters in district Mathura from 38 news-reported accidents, validated against TBD."
+
+## Key Metrics Table
+
+| Metric | Target | Measured Result | Status |
+| :--- | :--- | :--- | :--- |
+| **Dataset size** | 150+ unique accidents | 38 | Pending |
+| **Geocoded share** | 85%+ | 1.0 | Met |
+| **Geocode accuracy** | 30+ hand-verified points within 200m | TBD | Pending |
+| **Duplicate detection** | Precision on 20 flagged pairs | TBD | Pending |
+| **Cluster stability** | Top 5 overlap across eps 200, 300, 500 | 200m: 3 overlap, 300m: 3 overlap, 500m: 3 overlap | Measured |
+| **Time-split hit rate** | Hit rate > random baseline | 0.923 (Baseline: 0.0) | Measured |
+| **External check** | Matches official traffic list / officer view | TBD | Pending |
+
+## Clustering & Analysis Overview
+- **Total Records Processed**: 40
+- **Unique Deduplicated Accidents**: 38
+- **Detected Blackspots**: 3
+- **Noise Accidents (Isolated Points)**: 0.158
+
+## Limitations
+1. Only news-reported accidents are included, and serious and fatal ones are over-represented.
+2. Location accuracy depends on how the reporter wrote the place.
+3. Small sample (about 150 to a few hundred) means results are indicative, not statistically proven.
+4. The tool does not explain causes.
+5. Clusters depend on the chosen eps and min_samples. Sensitivity results are reported.

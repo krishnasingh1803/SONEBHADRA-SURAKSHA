@@ -1,0 +1,4 @@
+rank,label,lat,lon,accidents,killed,injured,score,peak_time,peak_weekday
+1,"NH-19 Highway Toll Plaza, Mathura",27.525131,77.651997,12,6,15,33.5,morning,Sunday
+2,"Bhuteshwar Junction, Mathura",27.497648,77.681028,12,5,11,27.0,night,Monday
+3,"Goverdhan Chauraha, Mathura",27.48286,77.663834,8,4,11,24.0,morning,Saturday

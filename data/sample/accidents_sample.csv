@@ -1,0 +1,41 @@
+id,date,time,place_text,district,vehicle_types,injured,killed,source_url,source_name,other_sources,lat,lon
+1,2026-01-19,10:51,"NH-19 Highway Toll Plaza, Mathura",Mathura,truck;car,0,2,https://example.com/synthetic/1,SYNTHETIC,,27.525244,77.651168
+2,2026-05-14,18:50,"NH-19 Highway Toll Plaza, Mathura",Mathura,bus;truck,3,0,https://example.com/synthetic/2,SYNTHETIC,,27.524747,77.651987
+3,2026-01-15,10:13,"NH-19 Highway Toll Plaza, Mathura",Mathura,car;bike,0,1,https://example.com/synthetic/3,SYNTHETIC,,27.525902,77.652374
+4,2026-09-13,15:04,"NH-19 Highway Toll Plaza, Mathura",Mathura,bike,2,0,https://example.com/synthetic/4,SYNTHETIC,,27.524852,77.651455
+5,2026-07-19,13:09,"NH-19 Highway Toll Plaza, Mathura",Mathura,bus;truck,2,2,https://example.com/synthetic/5,SYNTHETIC,,27.525426,77.652292
+6,2026-02-13,07:47,"NH-19 Highway Toll Plaza, Mathura",Mathura,truck;bike,1,0,https://example.com/synthetic/6,SYNTHETIC,,27.524349,77.652493
+7,2026-06-19,03:49,"NH-19 Highway Toll Plaza, Mathura",Mathura,bike;pedestrian,1,1,https://example.com/synthetic/7,SYNTHETIC,,27.52552,77.652595
+8,2026-07-18,19:14,"NH-19 Highway Toll Plaza, Mathura",Mathura,truck;bike,0,0,https://example.com/synthetic/8,SYNTHETIC,,27.525093,77.652175
+9,2026-03-22,11:42,"NH-19 Highway Toll Plaza, Mathura",Mathura,truck;bike,1,0,https://example.com/synthetic/9,SYNTHETIC,,27.525231,77.652505
+10,2026-05-24,03:39,"NH-19 Highway Toll Plaza, Mathura",Mathura,bike;pedestrian,2,0,https://example.com/synthetic/10,SYNTHETIC,,27.526196,77.651307
+11,2026-06-01,19:18,"NH-19 Highway Toll Plaza, Mathura",Mathura,car;bike,1,0,https://example.com/synthetic/11,SYNTHETIC,,27.525469,77.652569
+12,2026-01-24,09:49,"NH-19 Highway Toll Plaza, Mathura",Mathura,car;bike,0,0,https://example.com/synthetic/12,SYNTHETIC,,27.523979,77.651093
+13,2026-04-11,23:39,"NH-19 Highway Toll Plaza, Mathura",Mathura,bus;truck,2,0,https://example.com/synthetic/13,SYNTHETIC,,27.524658,77.652127
+14,2026-05-20,00:41,"Bhuteshwar Junction, Mathura",Mathura,car;bike,1,0,https://example.com/synthetic/14,SYNTHETIC,,27.497695,77.680043
+15,2026-03-09,03:22,"Bhuteshwar Junction, Mathura",Mathura,bike,1,0,https://example.com/synthetic/15,SYNTHETIC,,27.498357,77.681532
+16,2026-09-14,02:21,"Bhuteshwar Junction, Mathura",Mathura,car;car,0,2,https://example.com/synthetic/16,SYNTHETIC,,27.496942,77.680202
+17,2026-07-08,18:26,"Bhuteshwar Junction, Mathura",Mathura,truck;bike,0,1,https://example.com/synthetic/17,SYNTHETIC,,27.497715,77.68159
+18,2026-06-15,10:48,"Bhuteshwar Junction, Mathura",Mathura,car;bike,2,1,https://example.com/synthetic/18,SYNTHETIC,,27.496618,77.681348
+19,2026-02-16,07:37,"Bhuteshwar Junction, Mathura",Mathura,truck;car,1,0,https://example.com/synthetic/19,SYNTHETIC,,27.497576,77.681186
+20,2026-03-18,09:11,"Bhuteshwar Junction, Mathura",Mathura,car;bike,0,0,https://example.com/synthetic/20,SYNTHETIC,,27.498176,77.682087
+21,2026-05-10,23:34,"Bhuteshwar Junction, Mathura",Mathura,car;bike,1,0,https://example.com/synthetic/21,SYNTHETIC,,27.497488,77.680259
+22,2026-01-08,23:03,"Bhuteshwar Junction, Mathura",Mathura,bike;pedestrian,1,1,https://example.com/synthetic/22,SYNTHETIC,,27.497188,77.681251
+23,2026-09-09,19:16,"Bhuteshwar Junction, Mathura",Mathura,car;bike,1,0,https://example.com/synthetic/23,SYNTHETIC,,27.497208,77.679294
+24,2026-02-09,00:32,"Bhuteshwar Junction, Mathura",Mathura,bike;pedestrian,0,0,https://example.com/synthetic/24,SYNTHETIC,,27.498853,77.681126
+25,2026-03-03,22:46,"Bhuteshwar Junction, Mathura",Mathura,car;bike,3,0,https://example.com/synthetic/25,SYNTHETIC,,27.497957,77.682414
+26,2026-08-13,00:18,"Goverdhan Chauraha, Mathura",Mathura,truck;car,1,2,https://example.com/synthetic/26,SYNTHETIC,,27.48242,77.665703
+27,2026-09-26,21:15,"Goverdhan Chauraha, Mathura",Mathura,bus;truck,0,0,https://example.com/synthetic/27,SYNTHETIC,,27.483308,77.663875
+28,2026-07-23,10:05,"Goverdhan Chauraha, Mathura",Mathura,bike,2,0,https://example.com/synthetic/28,SYNTHETIC,,27.481978,77.664138
+29,2026-04-11,08:39,"Goverdhan Chauraha, Mathura",Mathura,bus;truck,0,1,https://example.com/synthetic/29,SYNTHETIC,,27.484045,77.664176
+30,2026-02-02,06:01,"Goverdhan Chauraha, Mathura",Mathura,truck;car,0,0,https://example.com/synthetic/30,SYNTHETIC,,27.48202,77.662905
+31,2026-09-21,06:18,"Goverdhan Chauraha, Mathura",Mathura,bike;pedestrian,3,0,https://example.com/synthetic/31,SYNTHETIC,,27.484169,77.663114
+32,2026-02-01,03:16,"Goverdhan Chauraha, Mathura",Mathura,car;car,0,0,https://example.com/synthetic/32,SYNTHETIC,,27.48327,77.665126
+33,2026-08-22,10:11,"Goverdhan Chauraha, Mathura",Mathura,truck;car,2,1,https://example.com/synthetic/33,SYNTHETIC,,27.482325,77.663025
+34,2026-05-14,03:07,"Goverdhan Chauraha, Mathura",Mathura,car;car,3,0,https://example.com/synthetic/34,SYNTHETIC,,27.482613,77.663738
+35,2026-02-18,14:33,"Scattered Road Landmark 35, Mathura",Mathura,truck;car,0,0,https://example.com/synthetic/35,SYNTHETIC,,27.543377,77.616683
+36,2026-09-20,10:10,"Scattered Road Landmark 36, Mathura",Mathura,truck;car,0,0,https://example.com/synthetic/36,SYNTHETIC,,27.548348,77.685225
+37,2026-03-22,06:49,"Scattered Road Landmark 37, Mathura",Mathura,truck;car,0,0,https://example.com/synthetic/37,SYNTHETIC,,27.43454,77.626797
+38,2026-04-04,14:17,"Scattered Road Landmark 38, Mathura",Mathura,bus;truck,0,0,https://example.com/synthetic/38,SYNTHETIC,,27.536529,77.686073
+39,2026-03-07,12:14,"Scattered Road Landmark 39, Mathura",Mathura,bike,1,1,https://example.com/synthetic/39,SYNTHETIC,,27.536499,77.668168
+40,2026-02-06,02:21,"Scattered Road Landmark 40, Mathura",Mathura,truck;car,0,0,https://example.com/synthetic/40,SYNTHETIC,,27.440387,77.685032
