@@ -1,9 +1,4 @@
 rank,label,lat,lon,accidents,killed,injured,score,peak_time,peak_weekday
-1,"NH-39 मारकुंडी घाटी तीसरा मोड़, सोनभद्र NH-39",24.605234,83.054697,27,19,53,111.5,night,Saturday
-2,हाथीनाला मोड़ के पास,24.321417,83.045021,16,10,39,69.0,night,Sunday
-3,चोपन सोन नदी पुल के पास,24.523719,83.038278,22,12,29,67.0,night,Sunday
-4,मुर्धवा मोड़ रेणुकूट के पास,24.218125,83.032616,24,4,21,37.5,morning,Friday
-5,"शक्तिनगर ज्वालामुखी मोड़ के पास, सोनभद्र",24.125541,82.709093,13,5,16,31.0,night,Friday
-6,"अनपरा ककरी मोड़ के पास, सोनभद्र",24.20285,82.76818,20,4,13,29.5,morning,Saturday
-7,चुर्क तिराहा के पास,24.698525,83.102904,14,4,12,26.0,morning,Saturday
-8,दुद्धी कस्बा चौराहा के पास,24.215334,83.247209,12,4,5,19.5,night,Wednesday
+1,"NH-19 Highway Toll Plaza, Mathura",27.525131,77.651997,12,6,15,33.5,morning,Sunday
+2,"Bhuteshwar Junction, Mathura",27.497648,77.681028,12,5,11,27.0,night,Monday
+3,"Goverdhan Chauraha, Mathura",27.48286,77.663834,8,4,11,24.0,morning,Saturday

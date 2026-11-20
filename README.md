@@ -73,23 +73,55 @@ accidents_raw.csv (Sonbhadra news reports)
 
 ---
 
-## 5. Visual UI & Interactive Dashboard
+## 5. Suraksha (सुरक्षा) Full-Stack Web Application
 
-The dashboard is custom-styled with the **soft-card design aesthetic** requested by the user:
-- Warm canvas background (`#F7F7F5`) with rounded cards (`border-radius: 24px`)
-- Soft sand / cream card (`#FFF6E5`) for primary blackspot indicators
-- Soft sky blue card (`#DCEEF7`) for active incident logging
-- Soft mint card (`#E4F5EB`) for reported casualty totals
-- Deep charcoal pill actions and interactive Folium mapping
+The project includes **Suraksha (सुरक्षा)**, an enterprise-grade road safety intelligence web application built on top of the Sonbhadra pipeline:
+- **Backend**: FastAPI (`/api`) with JWT auth, bcrypt password hashing, sliding-window login rate limiting, SQLite pending reports workflow, and cached pipeline output.
+- **Frontend**: React + Vite + TypeScript + Tailwind CSS + Framer Motion + React-Leaflet (`/web`).
+- **Brand & Theme**: Suraksha shield with road-pin logo, deep navy, safety orange, warning red, and soft cream card palette matching modern mobile interfaces.
+- **Portals**:
+  - **Citizen Portal**: View top blackspots, time-of-day safety tips, and submit localized hazard reports with an interactive click-to-pick map.
+  - **Admin Dashboard**: Live KPI cards, Leaflet map with ranked blackspots and incident markers, sortable field action table with CSV export, pattern analysis charts, and a pending hazard reports inbox (Approve / Reject).
+  - **Bilingual & Dark Mode**: Instant Hindi/English toggle and light/dark mode switch.
 
-### Launch Streamlit Dashboard
+### Quick Start: Launching Suraksha Locally
+
+#### 1. Start the FastAPI Backend
+```bash
+# Install dependencies and configure local credentials once:
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+# Edit .env and replace the example values; JWT_SECRET must be a random value
+# of at least 32 characters. Keep .env private and do not commit it.
+
+# In the project root with virtual environment activated:
+.\.venv\Scripts\python.exe -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+- API Docs & Swagger: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+#### 2. Start the Vite React Frontend
+```bash
+cd web
+npm run dev -- --host 127.0.0.1 --port 5173
+```
+- Application Web URL: [http://127.0.0.1:5173](http://127.0.0.1:5173)
+
+The API seeds the admin account from `ADMIN_EMAIL` and `ADMIN_PASSWORD` on first
+startup. Optionally set `CITIZEN_EMAIL` and `CITIZEN_PASSWORD` to seed a citizen
+account. The `.env` file is local-only and must never be committed.
+
+---
+
+## 6. Streamlit Classical Dashboard (Optional)
+
+In addition to the modern React web application, the classical single-page Streamlit dashboard remains available:
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
 ---
 
-## 6. CLI Execution Commands
+## 7. CLI Execution Commands
 
 ```bash
 # 1. Validate raw CSV data

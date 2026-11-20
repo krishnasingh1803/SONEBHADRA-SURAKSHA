@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #007eb4;
+    --color-primary-dark: #005a82;
+    --color-footer-bg: #003B5C;
+    --color-bg: #FFFFFF;
+    --color-section-bg: #F4F6F8;
+    --color-border: #DFE3E8;
+    --color-text: #1A1A1A;
+    --color-muted: #5B6770;
+    --color-danger: #D32F2F;
+    --color-warning: #F59E0B;
+    --color-ok: #2E7D32;
+    --radius-default: 4px;
+  }
+
+  body {
+    font-family: 'Josefin Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', 'Noto Sans Devanagari', sans-serif;
+    color: var(--color-text);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  /* Clear Heading Scale */
+  h1 { font-size: 2.25rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.75rem; letter-spacing: -0.015em; }
+  h3 { font-size: 1.35rem; letter-spacing: -0.01em; }
+  h4 { font-size: 1.15rem; }
+  h5 { font-size: 1.0rem; }
+
+  /* Focus ring for accessibility */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Institutional Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-section-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Leaflet Container styles */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  z-index: 10;
+  border: 1px solid var(--color-border);
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--color-border);
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
+  padding: 0;
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  line-height: 1.5;
+}
+
+/* Subtle transitions for buttons and links */
+a, button {
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+/* Skip link styling */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 8px 16px;
+  z-index: 1000;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: top 150ms ease-in-out;
+}
+.skip-link:focus {
+  top: 10px;
+}
